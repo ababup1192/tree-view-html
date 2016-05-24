@@ -2,77 +2,245 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Hello, world</title>
-    <meta name="viewport" content="with=devide-width">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Hello, world</title>
+  <meta name="viewport" content="with=devide-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toggleButton.css">
 </head>
 
 <body>
-    <div class="tree well">
-        <ul>
-            <li>
-                <span class="tree-element"><i class="icon-folder-open"></i> Array[ ]</span>
-                <ul>
-                    <li>
-                        <span class="tree-element"><i class="icon-minus-sign"></i>0: Array[ ]</span>
-                        <ul>
-                            <li>
-                                <span class="tree-element"><i class="icon-leaf"></i>0: <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span></span>
-                                <input type="number" value="123"></input>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="tree-element"><i class="icon-minus-sign"></i>1: Object{ }</span>
-                        <ul>
-                            <li>
-                                <span class="tree-element"><i class="icon-leaf"></i>child0: <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span></span>
-                                <input type="number" value="456" />
-                            </li>
-                            <li>
-                                <span class="tree-element"><i class="icon-minus-sign"></i>child1: Object{ }</span>
-                                <ul>
-                                    <li>
-                                        <span class="tree-element"><i class="icon-minus-sign"></i> childObject: Object{ }</span>
-                                        <ul>
-                                            <li>
-                                                <span class="tree-element"><i class="icon-leaf"></i> bool</span>
-                                                <button type="button">true</button>
-                                            </li>
-                                            <li>
-                                                <i class="icon-leaf "></i> <button type="button">null</button>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span class="tree-element"><i class="icon-leaf"></i>text: <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span></span>
-                                        <input type="text" value="xyz"></input>
-                                    </li>
-                                    <li>
-                                        <span class="tree-element"><i class="icon-leaf"></i>number: <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span></span>
-                                        <input type="number" value="789" />
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="tree-element"><i class="icon-leaf"></i>child2: <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span></span>
-                                <input type="text" value="abc"></input>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+  <p>JNumber</p>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+    </span>
+    <input type="number" class="form-control">
+  </div>
+  <p>JString</p>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-text-background"></span>
+    </span>
+    <input type="text" class="form-control">
+  </div>
+  <p>JBoolean</p>
+  <div>
+    <input class="tgl tgl-skewed" type="checkbox" checked="checked" />
+    <label class="tgl-btn" data-tg-off="false" data-tg-on="true" />
+  </div>
+  <div>
+    <input class="tgl tgl-skewed" type="checkbox" />
+    <label class="tgl-btn" data-tg-off="false" data-tg-on="true" />
+  </div>
+  <p>null</p>
+  <button type="button" class="btn btn-default">null</button>
+  <p>JArrayField</p>
+  <div class="input-group json-field">
+    <span class="input-group-addon key"><span class="index-text">0</span></span>
+    <div class="input-group">
+      <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+      </span>
+      <input type="number" class="form-control">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js " integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS "
-        crossorigin="anonymous ">
+  </div>
+  <p>JField</p>
+  <div class="input-group json-field">
+    <span class="input-group-addon key"><span class="key-text">keyeeeeeeeees</span></span>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-text-background"></span>
+      </span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <!-- value boolean -->
+  <div class="input-group json-field">
+    <span class="input-group-addon key"><span class="key-text">hoge_flag</span></span>
+    <div class="input-group">
+      <span class="input-group-addon">
+         <div class="field-value">
+            <input class="tgl tgl-skewed" type="checkbox" checked="checked" />
+            <label class="tgl-btn" data-tg-off="false" data-tg-on="true" />
+         </div>
+      </span>
+    </div>
+  </div>
+  <!-- null -->
+  <div class="input-group json-field ">
+    <span class="input-group-addon key"><span class="key-text">null</span></span>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <div class="field-value">
+          <button type="button" class="btn btn-default btn-group-sm">null</button>
+        </div>
+      </span>
+    </div>
+    </span>
+  </div>
+  <!-- array -->
+  <div class="input-group json-field">
+    <span class="input-group-addon key"><span class="key-text">arr</span></span>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <span class="label"><i class="icon-folder-open"></i>Array [  ]</span>
+      </span>
+    </div>
+  </div>
+  <p>JLabel</p>
+  <span class="label"><i class="icon-folder-open"></i>Array [  ]</span>
+  <span class="label"><i class="icon-folder-open"></i>Object {  }</span>
+  <p>JArray</p>
+  <div class="tree well">
+    <ul>
+      <li>
+        <!-- Array -->
+        <span class="label"><i class="icon-folder-open"></i>Array [  ]</span>
+        <!-- Array has List of JValue -->
+        <ul>
+          <!-- 0 -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="index-text">0</span></span>
+              <div class="input-group">
+                <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                </span>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </li>
+          <!-- 1 -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="index-text">1</span></span>
+              <div class="input-group">
+                <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                </span>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
-    </script>
-    <script src="app.js "></script>
+  <p>JArray-nest</p>
+  <div class="tree well">
+    <ul>
+      <li>
+        <!-- Array -->
+        <span class="label"><i class="icon-folder-open"></i>Array [  ]</span>
+        <!-- Array has List of JValue -->
+        <ul>
+          <!-- 0 -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="index-text">0</span></span>
+              <div class="input-group">
+                <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                </span>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </li>
+          <!-- 1 -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="index-text">1</span></span>
+              <div class="input-group">
+                <div class="tree well">
+                  <ul>
+                    <li>
+                      <!-- Array -->
+                      <span class="label"><i class="icon-folder-open"></i>Array [  ]</span>
+                      <!-- Array has List of JValue -->
+                      <ul>
+                        <!-- 0 -->
+                        <li>
+                          <div class="input-group json-field">
+                            <span class="input-group-addon key"><span class="index-text">0</span></span>
+                            <div class="input-group">
+                              <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                              </span>
+                              <input type="number" class="form-control">
+                            </div>
+                          </div>
+                        </li>
+                        <!-- 1 -->
+                        <li>
+                          <div class="input-group json-field">
+                            <span class="input-group-addon key"><span class="index-text">1</span></span>
+                            <div class="input-group">
+                              <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                              </span>
+                              <input type="number" class="form-control">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <p>JObject</p>
+  <div class="tree well">
+    <ul>
+      <li>
+        <!-- Object -->
+        <span class="label"><i class="icon-folder-open"></i>Object {  }</span>
+        <!-- Array has List of JValue -->
+        <ul>
+          <!-- chuld -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="key-text">child</span></span>
+              <div class="input-group">
+                <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                </span>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </li>
+          <!-- 1 -->
+          <li>
+            <div class="input-group json-field">
+              <span class="input-group-addon key"><span class="key-text">arr</span></span>
+              <div class="input-group">
+                <span class="input-group-addon">
+      <span class="glyphicon glyphicon-sort-by-order"></span>
+                </span>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js " integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS "
+    crossorigin="anonymous ">
+
+  </script>
+  <script src="app.js "></script>
 </body>
 
 </html>
